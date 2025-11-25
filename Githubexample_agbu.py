@@ -1,11 +1,7 @@
-# No database needed; using in-memory storage with a list of dictionaries
-records = []  # List to store lost ID records
-id_counter = 1  # Counter for auto-incrementing IDs
-
-# ADMIN LOGIN
 def login():
     print("=== Admin Login ===")
     username = input("Username: ")
+    
     password = input("Password: ")
     if username == "admin" and password == "1122334455":
         print("Login successful!\n")
@@ -16,7 +12,8 @@ def login():
 
 # CRUD FUNCTIONS
 
-
+records = [] 
+id_counter = 1 
 def add_id():
     global id_counter
     print("\n=== Add Found Student ID ===")
